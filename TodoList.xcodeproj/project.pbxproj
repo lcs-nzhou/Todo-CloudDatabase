@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7408E30A2BFE4F6E00DA075E /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 7408E3092BFE4F6E00DA075E /* Auth */; };
+		7408E30C2BFE4F6E00DA075E /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 7408E30B2BFE4F6E00DA075E /* Functions */; };
+		7408E30E2BFE4F6E00DA075E /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 7408E30D2BFE4F6E00DA075E /* PostgREST */; };
+		7408E3102BFE4F6E00DA075E /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 7408E30F2BFE4F6E00DA075E /* Realtime */; };
+		7408E3122BFE4F6E00DA075E /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 7408E3112BFE4F6E00DA075E /* Storage */; };
 		74B1F3532BD2A48300B4C98B /* TodoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B1F3522BD2A48300B4C98B /* TodoListViewModel.swift */; };
 		814A08FC2BC41BC500921E4F /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A08FB2BC41BC500921E4F /* ItemView.swift */; };
 		814A08FE2BC41C7800921E4F /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A08FD2BC41C7800921E4F /* TodoItem.swift */; };
@@ -32,6 +37,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7408E30E2BFE4F6E00DA075E /* PostgREST in Frameworks */,
+				7408E30C2BFE4F6E00DA075E /* Functions in Frameworks */,
+				7408E30A2BFE4F6E00DA075E /* Auth in Frameworks */,
+				7408E3122BFE4F6E00DA075E /* Storage in Frameworks */,
+				7408E3102BFE4F6E00DA075E /* Realtime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +134,13 @@
 			dependencies = (
 			);
 			name = TodoList;
+			packageProductDependencies = (
+				7408E3092BFE4F6E00DA075E /* Auth */,
+				7408E30B2BFE4F6E00DA075E /* Functions */,
+				7408E30D2BFE4F6E00DA075E /* PostgREST */,
+				7408E30F2BFE4F6E00DA075E /* Realtime */,
+				7408E3112BFE4F6E00DA075E /* Storage */,
+			);
 			productName = TodoList;
 			productReference = 815D9D792BC413800050957E /* TodoList.app */;
 			productType = "com.apple.product-type.application";
@@ -152,6 +169,9 @@
 				Base,
 			);
 			mainGroup = 815D9D702BC413800050957E;
+			packageReferences = (
+				7408E3082BFE4F6D00DA075E /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			productRefGroup = 815D9D7A2BC413800050957E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -388,6 +408,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7408E3082BFE4F6D00DA075E /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase-community/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7408E3092BFE4F6E00DA075E /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7408E3082BFE4F6D00DA075E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		7408E30B2BFE4F6E00DA075E /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7408E3082BFE4F6D00DA075E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		7408E30D2BFE4F6E00DA075E /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7408E3082BFE4F6D00DA075E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		7408E30F2BFE4F6E00DA075E /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7408E3082BFE4F6D00DA075E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		7408E3112BFE4F6E00DA075E /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7408E3082BFE4F6D00DA075E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 815D9D712BC413800050957E /* Project object */;
 }
