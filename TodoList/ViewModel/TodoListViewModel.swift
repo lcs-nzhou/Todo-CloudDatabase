@@ -46,5 +46,30 @@ class TodoListViewModel {
             }
         }
     }
+    func delete(_ todo: TodoItem) {
+            
+            // Create a unit of asynchronous work to add the to-do item
+            Task {
+                
+                do {
+                    
+                    // Run the delete command
+                    try await supabase
+                        .from("todos")
+                        .delete()
+                        .eq("id", value: todo.id!)  // Only delete the row whose id
+                        .execute()                  // matches that of the to-do being deleted
+                    
+                    // Update the list of to-do items held in memory to reflect the deletion
+                    try await self.getTodos()
+
+                } catch {
+                    debugPrint(error)
+                }
+                
+                
+            }
+                    
+        }
     
 }
